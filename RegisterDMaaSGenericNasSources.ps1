@@ -6,9 +6,9 @@
 param (
     [Parameter()][string]$username = 'DMaaS',  # Your DMaaS username (username@emaildomain.com)
     [Parameter(Mandatory = $True)][string]$apiKey,  # apiKey    
-    [Parameter(Mandatory = $True)][string]$regionId,  # DMaaS SQL Source Region Id
+    [Parameter(Mandatory = $True)][string]$regionId,  # DMaaS Generic NAS Source Region Id (us-east-1, us-east2, us-west-1, us-west-2)
     [Parameter(Mandatory = $True)][string]$saasConn,  # name of SaaS Connection to associate with gNasical Source
-    [Parameter()][array]$gNasFQDNShare = '',  # gNasical Source FQDN
+    [Parameter()][array]$gNasFQDNShare = '',  #genericNAS Source FQDN \\IPAddress\c$ or \\FQDN\ShareName
     [Parameter()][array]$gNasDescription,  # gNas Description(Tech Team Share, HR Share, Documents)
     [Parameter()][string]$gNasList = '', # 'C:\FolderPath\gNaslist.txt',  # optional textfile of Generic NAS Sources to protect
     [Parameter()][string]$environment = 'kGenericNas',  # environment type (kgNasical, kVMware, kAWS, kO365, kNetapp, KGenericNas)
